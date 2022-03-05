@@ -10,11 +10,21 @@
 </head>
 <body>
   <div class="wrapper">
-    <section class="form login">
+    <section class="form signup">
       <header>Realtime Chat App</header>
       <form action="#">
         <div class="error-text">
           This is an error message.
+        </div>
+        <div class="name-details">
+          <div class="field input">
+            <label for="">First Name</label>
+            <input type="text" placeholder="First Name">
+          </div>
+          <div class="field input">
+            <label for="">Last Name</label>
+            <input type="text" placeholder="Last Name">
+          </div>
         </div>
         <div>
           <div class="field input">
@@ -23,8 +33,12 @@
           </div>
           <div class="field input">
             <label for="">Password</label>
-            <input type="text" placeholder="Enter new password">
+            <input type="password" placeholder="Enter your password">
             <i class="fas fa-eye"></i>
+          </div>
+          <div class="field image">
+            <label for="">Select Image</label>
+            <input type="file">
           </div>
           <div class="field button">
             <input type="submit" value="Continue to Chat">
@@ -32,10 +46,12 @@
         </div>
       </form>
       <div class="link">
-        Not yet signed up?
-        <a href="#">Signup now</a>
+        Already signed up?
+        <a href="#">Login now</a>
       </div>
     </section>
   </div>
+  <script src="./javascript/pass-ahow-hide.js"></script>
+  <script src="./javascript//signup.js"></script>
 </body>
 </html>
