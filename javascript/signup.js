@@ -1,6 +1,8 @@
 const form = document.querySelector('.signup form')
 const continueBtn = document.querySelector('.button input');
 
+const errorTxt = document.querySelector('.error-text');
+
 const formSubmit = (e) => {
   e.preventDefault();
 
@@ -16,10 +18,17 @@ const startAjax = () => {
       if(xhr.status === 200){
         let data = xhr.response;
         console.log(data)
+        if(data === 'success'){
+          errorTxt.textContent = data;
+          errorTxt.style.display = 'block';
+        }else{
+
+        }
       }
     }
   }
-  xhr.send();
+  let formData = new FormData(form);
+  xhr.send(formData);
 };
 
 continueBtn.addEventListener('click', startAjax)
